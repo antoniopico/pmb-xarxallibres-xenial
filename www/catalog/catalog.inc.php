@@ -55,7 +55,11 @@ switch($categ) {
 		include('./tejuelo3.php');
 		break;	
 //-----------------------FIN LLIUREX 09/03/2016 -----------------
-
+//-------------SENIA---------------
+	case 'tejuelo_banc':
+		include('./tejuelo_banc.php');
+		break;	
+//-------------FIN SENIA-------
 	case 'update':
 		include('./catalog/notices/update_notice.inc.php');
 		break;

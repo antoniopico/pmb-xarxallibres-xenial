@@ -40,6 +40,11 @@ if ($acces_l==0) {
 	$cart_click_isbd = "onClick=\"openPopUp('./cart.php?object_type=NOTI&item=$id', 'cart', 600, 700, -2, -2, '$selector_prop')\"";
 	$cart_click_isbd = "<img src='./images/basket_small_20x20.gif' align='middle' alt='basket' title=\"${msg[400]}\" $cart_click_isbd>" ;
 	
+	//---SENIA
+	$cart_click_tej_bllibres = "onClick=\"openPopUp('./tejuelo_banc.php?codigos=$id', 'cart', 600, 700, -2, -2, '$selector_prop')\"";
+	$cart_click_tej_bllibres = "<img src='./images/basket_small_20x20.png' align='middle' alt='Imprimir tejuelos' width=40  title=\"${msg[400]}\" $cart_click_isbd>" ;
+	
+	
 	if ($current!==false) {
 		$print_action = "&nbsp;<a href='#' onClick=\"openPopUp('./print.php?current_print=$current&notice_id=".$id."&action_print=print_prepare','print',500,600,-2,-2,'scrollbars=yes,menubar=0'); w.focus(); return false;\"><img src='./images/print.gif' border='0' align='center' alt=\"".$msg["histo_print"]."\" title=\"".$msg["histo_print"]."\"/></a>";
 	}	
@@ -51,7 +56,7 @@ if ($acces_l==0) {
 	// header
 	print pmb_bidi("
 	<div class='row' style='padding-top: 8px;'>
-		".$isbd->aff_statut.$cart_click_isbd.$print_action."$visualise_click_notice<h1 style='display: inline;'>".$isbd->header."</h1>
+		".$isbd->aff_statut.$cart_click_tej_bllibres.$cart_click_isbd.$print_action."$visualise_click_notice<h1 style='display: inline;'>".$isbd->header."</h1>
 		 </div>");
 	
 	$boutons  = "<div class='row'><div class='left'><input type='button' name='modifier' class='bouton' value='$msg[62]' onClick=\"document.location='./catalog.php?categ=modif&id=$id';\" />&nbsp;";
