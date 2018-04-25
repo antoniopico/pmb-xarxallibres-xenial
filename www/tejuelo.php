@@ -141,8 +141,8 @@ require '/usr/share/php/fpdf/fpdf.php';
 $pdf=new FPDF('P','in','A4');
 
 // Metadata
-$pdf->SetAuthor('Lliurex');
-$pdf->SetTitle('Tejuelo Lliurex');
+$pdf->SetAuthor('PMB IES La Senia');
+$pdf->SetTitle('Tejuelo IES La Senia');
 
 //Otras características
 $pdf->SetDisplayMode('real'); // Mostramos el zoom al 100%
@@ -167,9 +167,9 @@ $new_col=1;
 foreach ($matriz as $exe_cote) {
 
 	if (is_numeric($exe_cote)) {
-		$q ='SELECT expl_cote, expl_cb FROM exemplaires WHERE expl_cb='.f_rellena_ceros($exe_cote).'';
+		$q ='SELECT expl_cote, expl_cb FROM exemplaires WHERE expl_cb="'.f_rellena_ceros($exe_cote).'"';
 	}else {
-		$q ='SELECT expl_cote, expl_cb FROM exemplaires WHERE expl_cb=\''.$exe_cote.'\'';
+		$q ='SELECT expl_cote, expl_cb FROM exemplaires WHERE expl_cb=\''.$exe_cote.'\' GROUP BY expl_cb';
 	}
 	
         //if ((strlen($exe_cote)==9) || $all == true){

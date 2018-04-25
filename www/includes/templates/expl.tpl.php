@@ -827,7 +827,8 @@ if ($pmb_rfid_activate==1  ) {
 				document.getElementById('form_cb_expl').value='';
 				document.getElementById('form_cb_expl').focus();
 				flag_antivol_retour=0;
-				read_retour(cb);				
+				read_retour(cb);
+				console.log('SENIA : '+cb);				
 			}
 
 		</script>

@@ -844,12 +844,14 @@ function read_retour(cb,index,indexcount,antivol) {
 			if(key_this_param[i] == cb_expl){
 				// Déjà lu et retour effectué
 				found=1;
+				alert('1 cb'+cb_expl);
 				break;
 			}
 		}
 		if (found==0) {	
 			//C'est un nouveau document, faire la requette ajax du retour
 			flag_antivol=1;
+			alert('0  cb'+cb_expl);
 			Ajax_do_retour(cb_expl);		
 			key_this_param[key_this_param.length]=cb_expl;
 		}	

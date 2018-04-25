@@ -475,6 +475,7 @@ $printer_ticket_script
 		else
 			z=x+' '+y+' ';
 		document.forms['prolong_bloc'].elements['id_bloc'].value = z;
+		console.log('SENIA : '+z);
 	}
 
 	function check_allcb(form)
