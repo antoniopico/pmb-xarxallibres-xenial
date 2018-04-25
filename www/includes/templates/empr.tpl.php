@@ -477,6 +477,7 @@ $printer_ticket_script
 		document.forms['prolong_bloc'].elements['id_bloc'].value = z;
 	}
 
+
 	function check_allcb(form)
 	{
 	    y=form.id_inpret.value;
@@ -486,6 +487,28 @@ $printer_ticket_script
 			if (document.forms['prolong'+id].elements['cbox_prol']) document.forms['prolong'+id].elements['cbox_prol'].click();
 		}
 	}
+	
+	// SENIA 
+	function check_devolucion(form)
+	{
+		// TODO
+		x=document.forms['prolong_bloc'].elements['form_cb'].value;
+            	y=form.cb_doc.value;
+                z='';
+
+                patt=new RegExp(' '+y+' ','g');
+
+                if (patt.test(x)) 
+                        z=x.replace(patt,'');
+                else
+                        z=x+' '+y+' ';
+		
+		console.log(' * Devolviendo : '+z);
+                //document.forms['prolong_bloc'].elements['id_bloc'].value = z;
+	}	
+
+
+	// FIN SENIA
 </script>
 <script type='text/javascript' src='./javascript/tablist.js'></script>
 <div id=\"el!!id!!Parent\" class=\"notice-parent\">
@@ -737,6 +760,9 @@ if (document.forms['pret_doc'].elements['cb_doc']!=undefined){
 			&nbsp;!!lettre_retard!!&nbsp;!!mail_retard!!&nbsp;
 			!!bt_histo_relance!!
 			!!voir_tout_pret!!
+			<!-- SENIA -->
+			&nbsp;<input type='button' name='devolucionmultiple' class='bouton' value='Devolución Múltiple' onClick=\"check_devolucion(this.form);\" />
+			<!-- FIN SENIA -->
 			</h3>
 		</th>
 		<th>".$msg['pret_bloc_prolong']."</th>
