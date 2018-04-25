@@ -493,8 +493,9 @@ $printer_ticket_script
 	function check_devolucion(form)
 	{
 		// TODO
-		x=document.forms['prolong_bloc'].elements['form_cb'].value;
-            	y=form.cb_doc.value;
+		x=document.forms['prolong_bloc'].elements['id_bloc'].value;
+		console.log(document.forms);
+            	y=form.id_doc.value;
                 z='';
 
                 patt=new RegExp(' '+y+' ','g');
@@ -504,7 +505,7 @@ $printer_ticket_script
                 else
                         z=x+' '+y+' ';
 		
-		console.log(' * Devolviendo : '+z);
+		console.log(' * Devolviendo : prolong'+z);
                 //document.forms['prolong_bloc'].elements['id_bloc'].value = z;
 	}	
 
