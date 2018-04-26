@@ -58,7 +58,11 @@ switch($categ) {
 //-------------SENIA---------------
 	case 'tejuelo_banc':
 		include('./tejuelo_banc.php');
+		break;
+	case 'tejuelo_legacy':
+		include('./tejuelo_legacy.php');
 		break;	
+
 //-------------FIN SENIA-------
 	case 'update':
 		include('./catalog/notices/update_notice.inc.php');

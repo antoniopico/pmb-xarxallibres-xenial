@@ -39,9 +39,13 @@ $catalog_menu = "
 	<li><a href='./catalog.php?categ=create'>$msg[270]</a></li>";
 // -------------------- LLIUREX  09/03/2016 -------------------- 
 	$catalog_menu .=	"<li><a href='./catalog.php?categ=tejuelo'>$msg[tejuelo2]</a></li>";
+// SENIA
+	$catalog_menu .=	"<li><a href='./catalog.php?categ=tejuelo_legacy'>Tejuelos de Legado</a></li>";
+
 	$catalog_menu .=	"<li><a href='./catalog.php?categ=tejuelo2'>$msg[tejuelo2_cat]</a></li>";
 	$catalog_menu .=	"<li><a href='./catalog.php?categ=tejuelo3'>$msg[tejuelo2_cdu]</a></li>";
-// -------------------- FIN LLIUREX  09/03/2016 ----------------	
+// -------------------- FIN LLIUREX  09/03/2016 ----------------
+
 	if ($opac_avis_allow) $catalog_menu .=	"<li><a href='./catalog.php?categ=avis'>$msg[menu_gestion_avis]</a></li>";
 	if ($opac_allow_add_tag) $catalog_menu .=	"<li><a href='./catalog.php?categ=tags'>$msg[menu_gestion_tags]</a></li>";
 
