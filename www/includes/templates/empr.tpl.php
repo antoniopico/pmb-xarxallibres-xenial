@@ -494,7 +494,8 @@ $printer_ticket_script
 	{
 		// TODO
 		x=document.forms['prolong_bloc'].elements['id_bloc'].value;
-		console.log(document.forms);
+		console.log(document.forms['sel_bloc']);
+		console(document.forms['sel_bloc'].id_inpret.value);
             	y=form.id_doc.value;
                 z='';
 
