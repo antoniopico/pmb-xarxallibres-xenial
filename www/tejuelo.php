@@ -206,7 +206,7 @@ foreach ($matriz as $exe_cote) {
 			} 
 
 		$matriz2=explode(" ",$cote);			
-		$pdf->SetFont('Arial','B',10);
+		$pdf->SetFont('Arial','B',10,'false');
 		$pdf->SetY($y);
 		$pdf->SetX($x);
 		if (strlen($matriz2[0])>6) $align="";
@@ -216,9 +216,9 @@ foreach ($matriz as $exe_cote) {
 		$pdf->Ln();
 		$pdf->SetX($x);
 		$pdf->Cell(LABEL_WIDTH/5, ($barcode_v_margin*1),$matriz2[1],"L", 0,'C');
-                $pdf->setFont('barcode',"",25);
+                $pdf->setFont('barcode',"",25,'false');
 		$pdf->Cell(LABEL_WIDTH-1, ($barcode_v_margin*1),"*".f_rellena_ceros($cb)."*","R", 0,'C');
-		$pdf->SetFont('Arial','B',10);
+		$pdf->SetFont('Arial','B',10,'false');
 		$pdf->Ln();
 		$pdf->SetX($x);
 		$pdf->Cell(LABEL_WIDTH/5, ($barcode_v_margin*1),$matriz2[2],"LB", 0,'C');
