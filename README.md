@@ -1,5 +1,13 @@
 # pmb-xarxallibres-xenial
 
+## Roadmap
+
+ * Devolucion Multiple a partir de un usuario.
+ * Formulario de cambio de Signatura
+ * PDFs que saltan tejuelos
+ * Informe custom del banco de libros (MySQL)
+ 
+
 ## MySQL tricks
 
 ### Importar Base de datos desde Trusty
