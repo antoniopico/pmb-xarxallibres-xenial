@@ -6,7 +6,10 @@
  * Formulario de cambio de Signatura
  * PDFs que saltan tejuelos
  * Informe custom del banco de libros (MySQL)
- 
+
+## URL Tricks
+
+ http://biblioteca.ieslasenia.org/circ.php?categ=retour&cb_expl=03274 
 
 ## MySQL tricks
 
