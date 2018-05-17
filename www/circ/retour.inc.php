@@ -32,23 +32,6 @@ if($form_cb_expl) {
 }
 print $expl->cb_tmpl.$expl->expl_form;
 
-//LA SENIA
-echo("<hr>");
-
-require("$base_path/includes/db_param.inc.php");
-
-$link2 = @mysql_connect(SQL_SERVER, USER_NAME, USER_PASS) OR die("Error MySQL");
-
-$q ='SELECT expl_cb FROM exemplaires';
-$q = 'select exemplaires.expl_cb , notices.tit1 from pret, exemplaires,empr, notices where notices.notice_id=exemplaires.expl_notice and pret.pret_idempr=empr.id_empr and pret.pret_idexpl=exemplaires.expl_id and empr.id_empr=640 order by pret.pret_date desc';
-
-	$resultData = @mysql_query($q, $link2);
-		if (@mysql_num_rows($resultData) != 0) {
-			while ($rowData = mysql_fetch_array($resultData)) {	
-				echo "Devuelve <a href=http://biblioteca.ieslasenia.org/circ.php?categ=retour&cb_expl=$rowData[0]>$rowData[1]</a><br>";
-			}
-		}
-	mysql_free_result($resultData);
 
 
 

@@ -19,6 +19,7 @@ if ((SESSrights & RESTRICTCIRC_AUTH) && ($categ!="pret") && ($categ!="pretrestri
 	<ul>
 		<li id='circ_menu_msg13'><a href='./circ.php?categ='>$msg[13]</a></li>
 		<li id='circ_menu_msg14'><a href='./circ.php?categ=retour'>$msg[14]</a></li>
+		<li id='circ_menu_msgxarxa'><a href='./circ.php?categ=retour_xarxa'>Dev. Múltiple</a></li>
 		<li id='circ_menu_msgcirc_doc_a_traiter'><a href='./circ.php?categ=ret_todo'>".$msg["circ_doc_a_traiter"]."</a></li>
 		<li id='circ_menu_msg903'><a href='./circ.php?categ=groups'>$msg[903]</a></li>
 		<li id='circ_menu_msg15'><a href='./circ.php?categ=empr_create'>$msg[15]</a></li>
