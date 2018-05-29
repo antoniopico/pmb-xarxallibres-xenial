@@ -177,6 +177,7 @@ $expl_statut = $_GET['expl_statut'];
 
 switch($module) {
 	case 'estado':
+		echo ("aaaa");
 		cambiarEstado($expl_cb,$expl_statut);		
 	break;
 	default:
