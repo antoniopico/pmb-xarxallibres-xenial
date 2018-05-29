@@ -9,14 +9,15 @@ $(document).ready(function(){
 		console.log(" * next book *");
 		var book = {};
 		$(this).find("td[name='valor']").each(function() {
-			book.cb_expl=$(this)[0].innerText;
+			book.expl_cb=$(this)[0].innerText;
 		})
 		$(this).find("td input[class='devolucion']").each(function() {
 			if($(this)[0].checked){	book.action=$(this)[0].value;}
 		})
 		if(book.action != "nodevolver"){
 			book.categ="retour";
-			book.expl_statut=17;
+			book.expl_statut="17";
+			book.module="estado";
 			books.push(book);
 		}
 		
@@ -25,7 +26,6 @@ $(document).ready(function(){
 	
 	books.forEach(function(book){
 		if (book.action=="devolver"){
-		console.log("Ajax de Amsterdan");
 		$.ajax({
 	           	type: "POST",
         	    	data: book,
